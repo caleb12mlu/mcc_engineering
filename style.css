@@ -1,0 +1,168 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: linear-gradient(120deg, #1e3c72, #2a5298);
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header img {
+    width: 100px;
+    animation: floatLogo 4s ease-in-out infinite;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #dcdcdc;
+}
+
+/* Navigation Buttons */
+nav button {
+    background: #fff;
+    color: #1e3c72;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav button:hover {
+    background: #2a5298;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Sections */
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    animation: fadeUp 1.2s ease-in-out;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+section h2 {
+    text-transform: uppercase;
+    color: #1e3c72;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #2a5298;
+    margin-top: 5px;
+    border-radius: 2px;
+    animation: slideBar 2s infinite alternate;
+}
+
+section img.sec {
+    width: 150px;
+    border-radius: 10px;
+    margin: 10px 0;
+    transition: transform 0.4s ease-in-out;
+}
+
+section img.sec:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: #1e3c72;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+footer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 5px 0;
+}
+
+footer ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+footer ul li a:hover {
+    color: #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes floatLogo {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes slideBar {
+    from { width: 30px; }
+    to { width: 60px; }
+}

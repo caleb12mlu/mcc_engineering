@@ -1,0 +1,254 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    background: #f2f4f8;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+    /*background: rgba(0, 0, 0, 0.7);
+    padding: 40px 20px;
+    text-align: center;
+    animation: fadeInDown 1s ease-in-out;*/
+    background: linear-gradient(to right, #003366, #0059b3);
+  color: whitesmoke;
+  text-align: center;
+  padding: 30px 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  
+}
+
+header img {
+    width: 80px;
+    border-radius: 10px;
+    animation: float 4s ease-in-out infinite;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    letter-spacing: 1px;
+    margin: 10px 0;
+    animation: slideInLeft 1s ease-in-out;
+    color: white;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav button {
+    background: white;
+    color: #000;
+    border: none;
+    padding: 10px 25px;
+    margin: 0 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px #00ffff80;
+}
+
+nav button:hover {
+    background: linear-gradient(to right, #003366, #0059b3);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Main */
+main {
+    background: #f2f4f8;
+  color: #222;
+  line-height: 1.6;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  
+}
+
+.contact_info p {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.8;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #00ffff50;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Form Section */
+.send_message {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.send_message form {
+    display: inline-block;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 0 15px #00ffff60;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.send_message input {
+    width: 250px;
+    padding: 12px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    background-color: #f1f1f1;
+    color: #333;
+    transition: 0.3s ease-in-out;
+}
+
+.send_message input:focus {
+    background-color: #fff;
+    box-shadow: 0 0 10px #00ffff80;
+}
+
+.send_message button {
+    margin-top: 10px;
+    padding: 12px 25px;
+    background-color: #00ffff;
+    border: none;
+    border-radius: 25px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.send_message button:hover {
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: #1e3c72;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+footer h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 5px 0;
+}
+
+footer ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+footer ul li a:hover {
+    color: #fff;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav button {
+        margin-top: 10px;
+    }
+
+    .send_message input {
+        width: 90%;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+    animation: pulse 2s infinite;
+}
+
+/* Hover Effect */
+.whatsapp-float:hover {
+    transform: scale(1.1) rotate(10deg);
+    background-color: #20ba5a;
+}
+
+/* Icon inside */
+.whatsapp-float i {
+    line-height: 60px;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
